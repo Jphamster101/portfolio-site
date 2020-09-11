@@ -1,0 +1,30 @@
+.project-image {
+    width: 100%;
+}
+
+.my-projects {
+    padding: 1em 0;
+    /* background-color: blue; */
+    display: grid;
+    grid-gap: 50px;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.project-description {
+    font-size: 1rem;
+}
+
+@media (max-width: 1500px) {
+    .projects-heading {
+        text-align: center;
+    }
+    .my-projects {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 800px) {
+    .my-projects {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

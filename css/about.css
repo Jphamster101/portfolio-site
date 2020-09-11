@@ -1,0 +1,21 @@
+.about-me-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 50px;
+    justify-content: center;
+    padding-bottom: 2rem;
+}
+
+.me-pic {
+    min-width: 300px;
+    width: 100%;
+}
+
+@media (max-width: 1080px) {
+    .about-me-heading {
+        text-align: center;
+    }
+    .about-me-section {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
