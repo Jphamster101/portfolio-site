@@ -3,32 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Page</title>
-    <link rel="stylesheet" href="/css/styles.css">
+    <title>Projects Page</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/contact_form.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
-    <div class="container">
-        <nav>
-            <ul class="nav-links">
-                <li><a class="link home-link" href="/views/index.html">Home</a></li>
-                <li><a class="link about-link" href="/views/about.html">About</a></li>
-                <li><a class="link project-link" href="/views/projects.html">Projects</a></li>
-                <li style=background-color:#6E7DAB><a class="link contact-link" href="/views/contact.html">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="introduction">
-            <section class="who-are-you">
-                <p class="greeting">Hello. I'm <strong>Johnny</strong>,</p>
-                <p style="font-size: 0.75em;" class="career-goal"> an aspiring Software Developer</p>
-            </section>
-            <section class="welcome">
-                <p>WELCOME TO THE</p>
-                <p>CONTACT PAGE</p>
-            </section>
-            <section class="call-to-action">
-                Dissent From the Fear...
-            </section>
+    <div class="wrapper">
+        <div class="container">
+            <nav>
+                <ul class="nav-links">
+                    <li><a class="link home-link" href="/views/index.html">Home</a></li>
+                    <li><a class="link about-link" href="/views/about.html">About</a></li>
+                    <li><a class="link project-link" href="/views/projects.html">Projects</a></li>
+                    <li style=background-color:#e5e5e5><a style="color: #000;" class="link contact-link" href="/views/contact.html">Contact</a></li>
+                </ul>
+                <div class="burger-menu">
+                    <div class="line line-1"></div>
+                    <div class="line line-2"></div>
+                    <div class="line line-3"></div>
+                </div>
+            </nav>
+            <main>
+                <h1 class="contact-heading">Contact Me</h1>
+                <div class="contact-section">
+                    <div class="contact-info">
+                        <h3>Contact Information</h3>
+                        <ul>
+                            <li class="address">518 Kirkwood Avenue</li>
+                            <li class="phone-number">(319) 290-4542</li>
+                            <li class="email">phamj1998@gmail.com</li>
+                        </ul>
+                    </div>
+                    <div class="contact-form">
+                        <form>
+                            <p>
+                                <label>Name:</label>
+                                <input type="text" name="name">
+                            </p>
+                            <p>
+                                <label>Company:</label>
+                                <input type="text" name="company">
+                            </p>
+                            <p>
+                                <label>Email Address:</label>
+                                <input type="email" name="email">
+                            </p>
+                            <p>
+                                <label>Phone Number:</label>
+                                <input type="text" name="phone">
+                            </p>
+                            <p class="full">
+                                <label>Message:</label>
+                                <textarea name="message" id="" rows="5"></textarea>
+                            </p>
+                            <p class="full">
+                                <button>SUBMIT</button>
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </main>
         </div>
+        <footer class="footer">
+            &copy; 2020 Johnny Pham
+        </footer>
     </div>
+    <script src="../script.js"></script>
 </body>
 </html>

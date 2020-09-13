@@ -4,45 +4,78 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects Page</title>
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="stylesheet" href="/css/projects.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/projects.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
-    <div class="container">
-        <nav>
-            <ul class="nav-links">
-                <li><a class="link home-link" href="/views/index.html">Home</a></li>
-                <li><a class="link about-link" href="/views/about.html">About</a></li>
-                <li style=background-color:#6E7DAB><a class="link project-link" href="/views/projects.html">Projects</a></li>
-                <li><a class="link contact-link" href="/views/contact.html">Contact</a></li>
-            </ul>
-        </nav>
-        <main>
-            <h1 class="projects-heading">Projects</h1>
-            <div class="projects-section">
-                <section class="my-projects">
-                    <div class="project-example">
-                        <img class="project-image" src="../assets/rp.jpg" alt="">
-                        <h1>Project One</h1>
-                        <p class="project-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum expedita accusantium aliquam deserunt iste quod odit consequuntur facere eaque. Tenetur?</p>
-                    </div>
-                    <div class="project-example">
-                        <img class="project-image" src="../assets/rp.jpg" alt="">
-                        <h1>Project One</h1>
-                        <p class="project-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum expedita accusantium aliquam deserunt iste quod odit consequuntur facere eaque. Tenetur?</p>
-                    </div>
-                    <div class="project-example">
-                        <img class="project-image" src="../assets/rp.jpg" alt="">
-                        <h1>Project One</h1>
-                        <p class="project-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum expedita accusantium aliquam deserunt iste quod odit consequuntur facere eaque. Tenetur?</p>
-                    </div>
-                    <div class="project-example">
-                        <img class="project-image" src="../assets/rp.jpg" alt="">
-                        <h1>Project One</h1>
-                        <p class="project-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum expedita accusantium aliquam deserunt iste quod odit consequuntur facere eaque. Tenetur?</p>
-                    </div>
-                </section>
-            </div>
-        </main>
+    <div class="wrapper">
+        <div class="container">
+            <nav>
+                <ul class="nav-links">
+                    <li><a class="link home-link" href="/views/index.html">Home</a></li>
+                    <li><a class="link about-link" href="/views/about.html">About</a></li>
+                    <li style=background-color:#e5e5e5><a style="color: #000;" class="link project-link" href="/views/projects.html">Projects</a></li>
+                    <li><a class="link contact-link" href="/views/contact.html">Contact</a></li>
+                </ul>
+                <div class="burger-menu">
+                    <div class="line line-1"></div>
+                    <div class="line line-2"></div>
+                    <div class="line line-3"></div>
+                </div>
+            </nav>
+            <main>
+                <h1 class="projects-heading">My Projects</h1>
+                <div class="projects-section">
+                    <section class="my-projects">
+                        <div class="project-example project-example-1">
+                            <img class="arduino project-image" src="../assets/blue.jpg" alt="">
+                            <h1>ARDUINO SECURITY SYSTEM</h1>
+                            <p class="project-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum expedita accusantium aliquam deserunt iste quod odit consequuntur facere eaque. Tenetur?</p>
+                        </div>
+                        <div class="project-example project-example-2">
+                            <img class="python project-image" src="../assets/python.jpg" alt="">
+                            <h1>PYTHON COMMENT INITIALIZER</h1>
+                            <p class="project-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum expedita accusantium aliquam deserunt iste quod odit consequuntur facere eaque. Tenetur?</p>
+                        </div>
+                        <div class="project-example project-example-3">
+                            <img class="corona project-image" src="../assets/corona.jpg" alt="">
+                            <h1>CORONAVIRUS STATUS CHECKER</h1>
+                            <p class="project-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum expedita accusantium aliquam deserunt iste quod odit consequuntur facere eaque. Tenetur?</p>
+                        </div>
+                        <div class="project-example project-example-4">
+                            <img class="coffee project-image" src="../assets/cup_of_joe.jpg" alt="">
+                            <h1>CUP OF JOE REVAMP SITE</h1>
+                            <p class="project-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum expedita accusantium aliquam deserunt iste quod odit consequuntur facere eaque. Tenetur?</p>
+                        </div>
+                        <div class="project-example project-example-1">
+                            <img class="arduino project-image" src="../assets/blue.jpg" alt="">
+                            <h1>ARDUINO SECURITY SYSTEM</h1>
+                            <p class="project-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum expedita accusantium aliquam deserunt iste quod odit consequuntur facere eaque. Tenetur?</p>
+                        </div>
+                        <div class="project-example project-example-1">
+                            <img class="arduino project-image" src="../assets/blue.jpg" alt="">
+                            <h1>ARDUINO SECURITY SYSTEM</h1>
+                            <p class="project-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum expedita accusantium aliquam deserunt iste quod odit consequuntur facere eaque. Tenetur?</p>
+                        </div>
+                        <div class="project-example project-example-1">
+                            <img class="arduino project-image" src="../assets/blue.jpg" alt="">
+                            <h1>ARDUINO SECURITY SYSTEM</h1>
+                            <p class="project-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum expedita accusantium aliquam deserunt iste quod odit consequuntur facere eaque. Tenetur?</p>
+                        </div>
+                        <div class="project-example project-example-1">
+                            <img class="arduino project-image" src="../assets/blue.jpg" alt="">
+                            <h1>ARDUINO SECURITY SYSTEM</h1>
+                            <p class="project-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum expedita accusantium aliquam deserunt iste quod odit consequuntur facere eaque. Tenetur?</p>
+                        </div>
+                    </section>
+                </div>
+            </main>
+        </div>
+        <footer class="footer">
+            &copy; 2020 Johnny Pham
+        </footer>
+    </div>
+    <script src="../script.js"></script>
 </body>
 </html>
