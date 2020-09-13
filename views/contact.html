@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../css/contact_form.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
-<body>
+<body onload="reset()">
     <div class="wrapper">
         <div class="container">
             <nav>
@@ -18,7 +18,7 @@
                     <li><a class="link project-link" href="/views/projects.html">Projects</a></li>
                     <li style=background-color:#e5e5e5><a style="color: #000;" class="link contact-link" href="/views/contact.html">Contact</a></li>
                 </ul>
-                <div class="burger-menu">
+                <div onClick="hooli()" class="burger-menu">
                     <div class="line line-1"></div>
                     <div class="line line-2"></div>
                     <div class="line line-3"></div>
@@ -36,29 +36,29 @@
                         </ul>
                     </div>
                     <div class="contact-form">
-                        <form>
+                        <form id="cf" method="POST" action="./contact.php">
                             <p>
                                 <label>Name:</label>
-                                <input type="text" name="name">
+                                <input type="text" name="name" required>
                             </p>
                             <p>
                                 <label>Company:</label>
-                                <input type="text" name="company">
+                                <input type="text" name="company" class="form-control">
                             </p>
                             <p>
                                 <label>Email Address:</label>
-                                <input type="email" name="email">
+                                <input type="email" name="email" class="form-control">
                             </p>
                             <p>
                                 <label>Phone Number:</label>
-                                <input type="text" name="phone">
+                                <input type="text" name="phone" class="form-control" required>
                             </p>
                             <p class="full">
                                 <label>Message:</label>
-                                <textarea name="message" id="" rows="5"></textarea>
+                                <textarea class="form-control" name="message" id="" rows="5"></textarea>
                             </p>
                             <p class="full">
-                                <button>SUBMIT</button>
+                                <button type="submit">SUBMIT</button>
                             </p>
                         </form>
                     </div>

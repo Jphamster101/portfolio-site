@@ -58,3 +58,19 @@ if (screen.width < 500) {
 }
 
 console.log('done');
+
+function hooli() {
+    var dropMenu = document.querySelector('.nav-links');
+
+    if (dropMenu.style.display =="flex") {
+        dropMenu.style.display ="none"
+    }
+    else {
+        dropMenu.style.display = "flex"
+    }
+}
+
+function reset() {
+    var dropMenu = document.querySelector('.nav-links');
+    dropMenu.style.display ="none"
+}

@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/about.css">
 </head>
-<body>
+<body onload="reset()">
     <div class="wrapper">
         <div class="container">
             <nav>
@@ -15,9 +15,9 @@
                     <li><a class="link home-link" href="/views/index.html">Home</a></li>
                     <li style="background-color:#e5e5e5"><a style="color: #000;" class="link about-link" href="/views/about.html">About</a></li>
                     <li><a class="link project-link" href="/views/projects.html">Projects</a></li>
-                    <li><a class="link contact-link" href="/views/contact_form.html">Contact</a></li>
+                    <li><a class="link contact-link" href="/views/contact.html">Contact</a></li>
                 </ul>
-                <div class="burger-menu">
+                <div onClick="hooli()" class="burger-menu">
                     <div class="line line-1"></div>
                     <div class="line line-2"></div>
                     <div class="line line-3"></div>
@@ -44,5 +44,6 @@
             &copy; 2020 Johnny Pham
         </div>
     </div>
+    <script src="../script.js"></script>
 </body>
 </html>
