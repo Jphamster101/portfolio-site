@@ -59,7 +59,7 @@ ul {
 
 .contact-info {
     /* width: 100%; */
-    background-color: rgb(33, 33, 109);
+    background-color: #333;
 }
 
 .contact-info, h3, .contact-info ul {
@@ -97,7 +97,7 @@ ul {
 
 .contact-form button {
     color: white;
-    background: blue;
+    background: #333;
     border: 1px solid white;
 }
 
@@ -121,6 +121,10 @@ ul {
     .contact-heading {
         text-align: center;
     }
+
+    .contact-form label {
+        font-size: 1em;
+    }
 }
 
 @media(min-width:700px) {
@@ -135,11 +139,18 @@ ul {
 
     .contact-info h3, .contact-info ul {
         text-align: left;
+        /* font-size: 1rem; */
     }
 
     .contact-info {
         display: flex;
         flex-direction: column;
         justify-content: center;
+    }
+}
+
+@media(max-width: 350px) {
+    .contact-info {
+        font-size: 0.75rem;
     }
 }

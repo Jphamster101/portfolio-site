@@ -15,7 +15,7 @@
 }
 
 .project-image {
-    min-width: 325px;
+    min-width: 275px;
     width: 100%;
 }
 
@@ -45,7 +45,7 @@
     color: white;
     padding: 1rem;
     border-radius: 10px;
-    background-color: #101a5a;
+    background-color: #333;
     /* background-color: rgb(27, 30, 58); */
     /* background-color: rgb(34, 69, 100); */
 }
