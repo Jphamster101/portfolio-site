@@ -5,25 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Johnny Pham's Porfolio</title>
     <link rel="stylesheet" href="../css/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
-<body onload="reset()">
+<body>
     <div class="wrapper">
-        <div class="container">
-            <nav>
-                <ul class="nav-links">
+        <nav class="navbar">
+    
+            <a href="#" class="toggle-button">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </a>
+            <div class="navbar-links">
+                <ul>
                     <li style=background-color:#e5e5e5><a style="color: #000;" class="link home-link" href="/views/index.html">Home</a></li>
                     <li><a class="link about-link" href="/views/about.html">About</a></li>
                     <li><a class="link project-link" href="/views/projects.html">Projects</a></li>
                     <li><a class="link contact-link" href="/views/contact.html">Contact</a></li>
                 </ul>
-    
-                <div onClick="hooli()" class="burger-menu">
-                    <div class="line line-1"></div>
-                    <div class="line line-2"></div>
-                    <div class="line line-3"></div>
-                </div>
-                
-            </nav>
+            </div>     
+        </nav>
+        <div class="container">
             <div class="introduction">
                 <section class="who-are-you">
                     <p class="greeting">Hello. I'm <strong>Mr. Robot</strong>,</p>

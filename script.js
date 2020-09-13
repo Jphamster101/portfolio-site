@@ -1,7 +1,7 @@
 var projects = document.querySelectorAll('.project-example');
 
 
-console.log(projects);
+// console.log(projects);
 
 projects.forEach((project, index) => {
     project.style.animation = `fade-in ${(index + 1 /8) - index * 0.7}s ease-in-out, drop-in ${(index + 1 /8) - index * 0.75}s ease-in-out`;
@@ -53,24 +53,23 @@ $(function() {
     );                  
 });
 
-if (screen.width < 500) {
-    console.log('SMOLE')
-}
+$(function() {
+    $(".project-example-5").hover(
+        function() {
+            $('.unknown').attr("src", "../assets/pooh.gif");
+        },
+        function() {
+            $('.unknown').attr("src", "../assets/404.jpg");
+        }                       
+    );                  
+});
 
-console.log('done');
+const toggleButton = document.querySelector('.toggle-button');
+const navbarlinks = document.getElementsByClassName('navbar-links')[0];
 
-function hooli() {
-    var dropMenu = document.querySelector('.nav-links');
-
-    if (dropMenu.style.display =="flex") {
-        dropMenu.style.display ="none"
-    }
-    else {
-        dropMenu.style.display = "flex"
-    }
-}
-
-function reset() {
-    var dropMenu = document.querySelector('.nav-links');
-    dropMenu.style.display ="none"
-}
+toggleButton.addEventListener('click', () => {
+    console.log('Toggle Clicked')
+    navbarlinks.classList.toggle('active');
+    
+    navbarlinks.style.animation = "navLinkFade ease-out 0.5s";
+});

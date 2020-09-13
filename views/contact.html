@@ -8,22 +8,25 @@
     <link rel="stylesheet" href="../css/contact_form.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
-<body onload="reset()">
+<body>
     <div class="wrapper">
-        <div class="container">
-            <nav>
-                <ul class="nav-links">
+        <nav class="navbar">
+    
+            <a href="#" class="toggle-button">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </a>
+            <div class="navbar-links">
+                <ul>
                     <li><a class="link home-link" href="/views/index.html">Home</a></li>
                     <li><a class="link about-link" href="/views/about.html">About</a></li>
                     <li><a class="link project-link" href="/views/projects.html">Projects</a></li>
                     <li style=background-color:#e5e5e5><a style="color: #000;" class="link contact-link" href="/views/contact.html">Contact</a></li>
                 </ul>
-                <div onClick="hooli()" class="burger-menu">
-                    <div class="line line-1"></div>
-                    <div class="line line-2"></div>
-                    <div class="line line-3"></div>
-                </div>
-            </nav>
+            </div>     
+        </nav>
+        <div class="container">
             <main>
                 <h1 class="contact-heading">Contact Me</h1>
                 <div class="contact-section">
