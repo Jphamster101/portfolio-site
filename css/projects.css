@@ -19,6 +19,36 @@
     width: 100%;
 }
 
+.unknown {
+    min-width: 275px;
+    width: 100%;
+}
+
+.image-box {
+    /* margin: 1rem; */
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+.github {
+    top: 8%;
+    left:25%;
+    position: absolute;
+    width: 50%;
+    opacity: 0;
+}
+
+.checkout_msg {
+    padding-bottom: 0.5rem;
+    left: 3%;
+    right: 3%;
+    bottom: 0;
+    position: absolute;
+    opacity: 0;
+}
+
 .projects-heading {
     color: #fca311;
     margin-top: 1em;
@@ -42,15 +72,19 @@
 }
 
 .project-example {
-    color: white;
+    /* color: white; */
     padding: 1rem;
     border-radius: 10px;
     background-color: #333;
-    /* background-color: rgb(27, 30, 58); */
-    /* background-color: rgb(34, 69, 100); */
 }
 
-.project-example:hover {
+.project_url {
+    text-decoration: none;
+    color: #f1f1f1;
+}
+
+.project_url:hover {
+
     color: #fca311;
 }
 
