@@ -19,7 +19,6 @@ $(function() {
             $(this).find('.checkout_msg').finish().animate({
                 opacity: "1.0"
             });
-            // $('.arduino').attr("src", "../assets/dance_robot_dance.gif");
         },
         function() {
             $(this).find('.project-image').finish().animate({
@@ -38,7 +37,7 @@ $(function() {
 });
 
 $(function() {
-    $(".project-example-5").hover(
+    $(".placeholder-project").hover(
         function() {
             $(this).find('.project-image').finish().animate({
                 opacity: "0.4"
@@ -51,8 +50,6 @@ $(function() {
             $(this).find('.checkout_msg').finish().animate({
                 opacity: "1.0"
             });
-            // $('.arduino').attr("src", "../assets/dance_robot_dance.gif");
-        },
         function() {
             $(this).find('.project-image').finish().animate({
                 opacity: "1.0"
@@ -80,4 +77,18 @@ toggleButton.addEventListener('click', () => {
 });
 
 
-var image
+function quoteGenerator() {
+    var quoteSection = document.querySelector('.quote');
+    var author = document.querySelector('.author');
+    var randomNumber = Math.floor(Math.random()* 1600);
+
+    fetch('https://type.fit/api/quotes')
+    .then(response => response.json())
+    .then(dataPacket => dataPacket[randomNumber])
+    .then(result => {
+        quoteSection.innerHTML = result.text;
+        author.innerHTML = '    ~' + result.author;
+    });
+}
+
+quoteGenerator();

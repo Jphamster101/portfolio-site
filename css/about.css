@@ -15,6 +15,7 @@
 }
 
 main {
+    /* background-color: crimson; */
     display: flex;
     flex-direction: column;
     align-items: left;
@@ -27,40 +28,33 @@ main {
 
 .introduction {
     width: 100%;
-    /* background-color: black; */
     display: grid;
     grid-template-columns: repeat(2, auto);
-    /* grid-gap: 25px; */
-    /* text-align: center; */
+    grid-gap: 25px;
     justify-content: center;
     padding-bottom: 2rem;
 }
 
 .about-me-heading {
     color: #fca311;
-    margin-top: 1em;
-    margin-left: 0.75em;
+    padding-top: 1rem;
+    margin-bottom: 1rem;
     animation: fade-in 1s ease-in;
 }
 
 .about-me-pic {
-    /* grid-column: 1 / 2; */
     padding: 0.5rem;
-    /* border-radius: 10px; */
     display: flex;
-    /* margin-right: 1em; */
-    /* justify-content: flex-end; */
-    /* background-color: #000000; */
     background-color: #333;
     animation: fade-in 2s ease-in;
 }
 
 .read-about-me {
-    color: #fca311;
+    line-height: 1.6;
+    font-size: 1.125rem;
+    color: #f1f1f1;
     width: 100%;
-    margin-top: 1em;
-    margin-left:1em;
-    animation: drop-in 3s ease-in, fade-in 3s ease-in;
+    animation: drop-in 2s ease-in, fade-in 2s ease-in;
     /* background-color: rgb(132, 0, 209); */
 }
 
