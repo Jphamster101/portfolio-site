@@ -50,6 +50,7 @@ $(function() {
             $(this).find('.checkout_msg').finish().animate({
                 opacity: "1.0"
             });
+        },
         function() {
             $(this).find('.project-image').finish().animate({
                 opacity: "1.0"
@@ -70,25 +71,7 @@ const toggleButton = document.querySelector('.toggle-button');
 const navbarlinks = document.getElementsByClassName('navbar-links')[0];
 
 toggleButton.addEventListener('click', () => {
-    console.log('Toggle Clicked')
     navbarlinks.classList.toggle('active');
     
     navbarlinks.style.animation = "navLinkFade ease-out 0.5s";
 });
-
-
-function quoteGenerator() {
-    var quoteSection = document.querySelector('.quote');
-    var author = document.querySelector('.author');
-    var randomNumber = Math.floor(Math.random()* 1600);
-
-    fetch('https://type.fit/api/quotes')
-    .then(response => response.json())
-    .then(dataPacket => dataPacket[randomNumber])
-    .then(result => {
-        quoteSection.innerHTML = result.text;
-        author.innerHTML = '    ~' + result.author;
-    });
-}
-
-quoteGenerator();
