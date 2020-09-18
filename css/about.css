@@ -45,11 +45,14 @@ main {
 .about-me-pic {
     padding: 0.5rem;
     display: flex;
-    background-color: #333;
+    background-color: #111;
     animation: fade-in 2s ease-in;
 }
 
 .read-about-me {
+    background-color: #111;
+    padding: 1rem;
+    border-radius: 5px;
     letter-spacing: 2px;
     line-height: 1.6;
     font-size: 1.125rem;
