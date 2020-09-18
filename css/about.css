@@ -37,7 +37,7 @@ main {
 
 .about-me-heading {
     color: #fca311;
-    padding-top: 1rem;
+    /* padding-top: 1rem; */
     margin-bottom: 1rem;
     animation: fade-in 1s ease-in;
 }

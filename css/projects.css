@@ -47,7 +47,7 @@
 .projects-heading {
     /* background-color: #f1f1f1; */
     color: #fca311;
-    padding-top: 1rem;
+    /* padding-top: 1rem; */
     margin-bottom: 1rem;
     animation: fade-in 1s ease-in;
 }
