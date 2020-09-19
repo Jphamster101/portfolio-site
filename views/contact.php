@@ -21,13 +21,14 @@
         $message = $_POST['message'];
 
         $email_body = "User name: ".$name. "\n";
+        $email_body .= "User Company: " .$company. "\n";
         $email_body .= "User Email: " .$visitor_email. "\n";
         $email_body .= "User Phone Number: " .$phone_number. "\n";
         $email_body .= "User Message: ".$message. "\n";
         
 
-        $mail->setFrom('phamj1998@gmail.com', 'Darth Vader');
-        $mail->addAddress('phamj1998@gmail.com', 'Emperor');
+        $mail->setFrom('phamj1998@gmail.com', $name);
+        $mail->addAddress('phamj1998@gmail.com', 'Johnny');
         $mail->Subject = 'New Form Submission';
         $mail->Body = $email_body;
 
