@@ -1,5 +1,18 @@
 <?php
-    $message_sent = false;
+    use PHPMailer\PHPMailer\PHPMailer;
+    use PHPMailer\PHPMailer\Exception;
+    require '../vendor/autoload.php';
+
+    // $dotenv = Dotenv\Dotenv::createImmutable('../');
+    // $dotenv->load();
+    $password = getenv('SMTP_GMAIL_PW');
+
+
+    // https://accounts.google.com/b/0/DisplayUnlockCaptcha
+
+    $mail = new PHPMailer(TRUE);
+
+    $message_sent = FALSE;
     if(isset($_POST['email']) && $_POST['email'] != '') {
         $name = $_POST['name'];
         $company = $_POST['company'];
@@ -7,22 +20,42 @@
         $phone_number = $_POST['phone'];
         $message = $_POST['message'];
 
-        $email_from = 'phamj1998@gmail.com';
-        $email_subject = "New Form Submission";
-
         $email_body = "User name: ".$name. "\n";
         $email_body .= "User Email: " .$visitor_email. "\n";
         $email_body .= "User Phone Number: " .$phone_number. "\n";
         $email_body .= "User Message: ".$message. "\n";
         
-        $to = "phamj1998@gmail.com";
 
-        $headers = "From: $email_from \r\n";
+        $mail->setFrom('phamj1998@gmail.com', 'Darth Vader');
+        $mail->addAddress('phamj1998@gmail.com', 'Emperor');
+        $mail->Subject = 'New Form Submission';
+        $mail->Body = $email_body;
 
-        $headers .= "Reply to: $visitor_email \r\n";
+        /* SMTP parameters. */
 
-        mail($to, $email_subject, $email_body,$headers);
-        $message_sent = true;
+        /* Use SMTP. */
+        $mail->isSMTP();
+
+        /* Google (Gmail) SMTP server. */
+        $mail->Host = 'smtp.gmail.com';
+
+        /* SMTP port. */
+        $mail->Port = 587;
+
+        /* Set authentication. */
+        $mail->SMTPAuth = TRUE;
+        $mail->AuthType = 'LOGIN';
+        $mail->SMTPSecure = 'tls';
+    
+    /* SMTP authentication username. */
+    $mail->Username = 'phamj1998@gmail.com';
+    
+    /* SMTP authentication password. */
+    $mail->Password = $password;
+    
+    /* Finally send the mail. */
+    $mail->send();
+    $message_sent = TRUE;
     }
 ?>
 
