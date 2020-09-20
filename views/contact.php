@@ -10,87 +10,87 @@
 
     $mail = new PHPMailer(TRUE);
 
-    $message_sent = FALSE;
-    if(isset($_POST['email']) && $_POST['email'] != '') {
-        $name = $_POST['name'];
-        $company = $_POST['company'];
-        $visitor_email = $_POST['email'];
-        $phone_number = $_POST['phone'];
-        $message = $_POST['message'];
+    // $message_sent = FALSE;
+    // if(isset($_POST['email']) && $_POST['email'] != '') {
+    //     $name = $_POST['name'];
+    //     $company = $_POST['company'];
+    //     $visitor_email = $_POST['email'];
+    //     $phone_number = $_POST['phone'];
+    //     $message = $_POST['message'];
 
-        if ($company == '') {
-            $company = "[NULL]";
-        }
+    //     if ($company == '') {
+    //         $company = "[NULL]";
+    //     }
 
-        $email_body = "Hello Johnny,<br>This email is to notify you that someone has submitted a contact request on your portfolio site.<br><br>";
-        $email_body .= "<b>".$name. "</b> from <b>" .$company. "</b> would like to reach out to you.<br>";
-        $email_body .= "This was ".$name. "'s message to you: <br><br> '<em>".$message. "</em>'<br><br>";
-        $email_body .= "You can reach " .$name. " at this email address ".$visitor_email. " or at this phone number ".$phone_number. "<br>";
+    //     $email_body = "Hello Johnny,<br>This email is to notify you that someone has submitted a contact request on your portfolio site.<br><br>";
+    //     $email_body .= "<b>".$name. "</b> from <b>" .$company. "</b> would like to reach out to you.<br>";
+    //     $email_body .= "This was ".$name. "'s message to you: <br><br> '<em>".$message. "</em>'<br><br>";
+    //     $email_body .= "You can reach " .$name. " at this email address ".$visitor_email. " or at this phone number ".$phone_number. "<br>";
         
 
-        $mail->setFrom($email, $name);
-        $mail->addAddress($email, 'Johnny');
-        $mail->Subject = 'PORTFOLIO Form Submission from '.$name;
-        $mail->Body = $email_body;
+    //     $mail->setFrom($email, $name);
+    //     $mail->addAddress($email, 'Johnny');
+    //     $mail->Subject = 'PORTFOLIO Form Submission from '.$name;
+    //     $mail->Body = $email_body;
 
-        /* SMTP parameters. */
+    //     /* SMTP parameters. */
 
-        /* Use SMTP. */
-        $mail->isSMTP();
+    //     /* Use SMTP. */
+    //     $mail->isSMTP();
 
-        /* Set authentication. */
-        $mail->SMTPAuth = true;
+    //     /* Set authentication. */
+    //     $mail->SMTPAuth = true;
 
-        // $mail->AuthType = 'LOGIN';
-        $mail->SMTPSecure = 'ssl';
+    //     // $mail->AuthType = 'LOGIN';
+    //     $mail->SMTPSecure = 'ssl';
 
-        /* Google (Gmail) SMTP server. */
-        $mail->Host = 'smtp.gmail.com';
+    //     /* Google (Gmail) SMTP server. */
+    //     $mail->Host = 'smtp.gmail.com';
 
-        /* SMTP port. */
-        $mail->Port = 465;
+    //     /* SMTP port. */
+    //     $mail->Port = 465;
 
-        $mail->IsHTML(true);
+    //     $mail->IsHTML(true);
 
-        /* SMTP authentication username. */
-        $mail->Username = $email;
+    //     /* SMTP authentication username. */
+    //     $mail->Username = $email;
         
-        /* SMTP authentication password. */
-        $mail->Password = $password;
+    //     /* SMTP authentication password. */
+    //     $mail->Password = $password;
         
-        /* Finally send the mail. */
-        $mail->send();
-        $message_sent = TRUE;
-    }
+    //     /* Finally send the mail. */
+    //     $mail->send();
+    //     $message_sent = TRUE;
+    // }
 
-// try {
+try {
    
-//    $mail->setFrom($email, 'Darth Vader');
-//    $mail->addAddress($email, 'Emperor');
-//    $mail->Subject = 'FSOCIETY';
-//    $mail->Body = 'There is a great disturbance in the Force.';
-//    $mail->isSMTP();
-//    $mail->Host = 'smtp.gmail.com';
-//    $mail->SMTPAuth = TRUE;
-// //    $mail->AuthType = 'LOGIN';
-//    $mail->SMTPSecure = 'ssl';
-//    $mail->Username = $email;
-//    $mail->Password = $password;
-//    $mail->Port = 465;
+   $mail->setFrom($email, 'Darth Vader');
+   $mail->addAddress($email, 'Emperor');
+   $mail->Subject = 'FSOCIETY';
+   $mail->Body = 'There is a great disturbance in the Force.';
+   $mail->isSMTP();
+   $mail->Host = 'smtp.gmail.com';
+   $mail->SMTPAuth = TRUE;
+//    $mail->AuthType = 'LOGIN';
+   $mail->SMTPSecure = 'ssl';
+   $mail->Username = $email;
+   $mail->Password = $password;
+   $mail->Port = 465;
    
-//    /* Enable SMTP debug output. */
-//    $mail->SMTPDebug = 4;
+   /* Enable SMTP debug output. */
+   $mail->SMTPDebug = 4;
    
-//    $mail->send();
-// }
-// catch (Exception $e)
-// {
-//    echo $e->errorMessage();
-// }
-// catch (\Exception $e)
-// {
-//    echo $e->getMessage();
-// }
+   $mail->send();
+}
+catch (Exception $e)
+{
+   echo $e->errorMessage();
+}
+catch (\Exception $e)
+{
+   echo $e->getMessage();
+}
 ?>
 
 <!DOCTYPE html>
