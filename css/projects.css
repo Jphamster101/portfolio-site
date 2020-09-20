@@ -46,7 +46,7 @@
 
 .projects-heading {
     /* background-color: #f1f1f1; */
-    color: #124263;
+    color: #0D47A1;
     /* padding-top: 1rem; */
     margin-bottom: 1rem;
     animation: fade-in 1s ease-in;
@@ -80,7 +80,7 @@
 
 .project_url:hover {
 
-    color: #124263;
+    color: #0D47A1;
 }
 
 .project-description {

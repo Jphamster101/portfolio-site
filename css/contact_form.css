@@ -21,7 +21,7 @@
 }
 
 .contact-heading {
-    color: #1565C0;
+    color: #0D47A1;
     margin-top: 1em;
 }
 
@@ -56,7 +56,7 @@ ul {
 }
 
 .contact-info {
-    background-color: #1565C0;
+    background-color: #0D47A1;
 }
 
 .contact-info, h3, .contact-info ul {
@@ -92,13 +92,13 @@ ul {
 
 .contact-form button {
     color: black;
-    background: #1565C0;
+    background: #0D47A1;
     border: 1px solid rgb(46, 45, 45);
 }
 
 .contact-form button:hover, .contact-form form:focus {
     color: black;
-    background: #3b7ac2;
+    background: #2154a1;
     outline: 0;
 }
 
