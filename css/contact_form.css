@@ -57,6 +57,7 @@ ul {
 
 .contact-info {
     background-color: #0D47A1;
+    color: #f1f1f1;
 }
 
 .contact-info, h3, .contact-info ul {
@@ -97,8 +98,8 @@ ul {
 }
 
 .contact-form button:hover, .contact-form form:focus {
-    color: black;
-    background: #2154a1;
+    color: white;
+    background: #1263dd;
     outline: 0;
 }
 

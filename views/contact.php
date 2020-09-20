@@ -165,7 +165,7 @@
                                 <textarea class="form-control" name="message" id="" rows="5"></textarea>
                             </p>
                             <p class="full">
-                                <button type="submit">GO</button>
+                                <button type="submit">SUBMIT</button>
                             </p>
                         </form>
                     </div>
