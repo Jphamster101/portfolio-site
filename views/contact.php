@@ -2,13 +2,11 @@
     use PHPMailer\PHPMailer\PHPMailer;
     use PHPMailer\PHPMailer\Exception;
     require '../vendor/autoload.php';
-
-    // $dotenv = Dotenv\Dotenv::createImmutable('../');
-    // $dotenv->load();
+    
+    $email = getenv('SMTP_GMAIL_EMAIL');
     $password = getenv('SMTP_GMAIL_PW');
 
-
-    // https://accounts.google.com/b/0/DisplayUnlockCaptcha
+// https://accounts.google.com/b/0/DisplayUnlockCaptcha
 
     $mail = new PHPMailer(TRUE);
 
@@ -20,16 +18,19 @@
         $phone_number = $_POST['phone'];
         $message = $_POST['message'];
 
-        $email_body = "User name: ".$name. "\n";
-        $email_body .= "User Company: " .$company. "\n";
-        $email_body .= "User Email: " .$visitor_email. "\n";
-        $email_body .= "User Phone Number: " .$phone_number. "\n";
-        $email_body .= "User Message: ".$message. "\n";
+        if ($company == '') {
+            $company = "[NULL]";
+        }
+
+        $email_body = "Hello Johnny,<br>This email is to notify you that someone has submitted a contact request on your portfolio site.<br><br>";
+        $email_body .= "<b>".$name. "</b> from <b>" .$company. "</b> would like to reach out to you.<br>";
+        $email_body .= "This was ".$name. "'s message to you: <br><br> '<em>".$message. "</em>'<br><br>";
+        $email_body .= "You can reach " .$name. " at this email address ".$visitor_email. " or at this phone number ".$phone_number. "<br>";
         
 
-        $mail->setFrom('phamj1998@gmail.com', $name);
-        $mail->addAddress('phamj1998@gmail.com', 'Johnny');
-        $mail->Subject = 'New Form Submission';
+        $mail->setFrom($email, $name);
+        $mail->addAddress($email, 'Johnny');
+        $mail->Subject = 'PORTFOLIO Form Submission from '.$name;
         $mail->Body = $email_body;
 
         /* SMTP parameters. */
@@ -37,29 +38,60 @@
         /* Use SMTP. */
         $mail->isSMTP();
 
+        /* Set authentication. */
+        $mail->SMTPAuth = true;
+
+        // $mail->AuthType = 'LOGIN';
+        $mail->SMTPSecure = 'ssl';
+
         /* Google (Gmail) SMTP server. */
         $mail->Host = 'smtp.gmail.com';
 
         /* SMTP port. */
-        $mail->Port = 587;
+        $mail->Port = 465;
 
-        /* Set authentication. */
-        $mail->SMTPAuth = TRUE;
-        $mail->AuthType = 'LOGIN';
-        $mail->SMTPSecure = 'tls';
-    
-    /* SMTP authentication username. */
-    $mail->Username = 'phamj1998@gmail.com';
-    
-    /* SMTP authentication password. */
-    $mail->Password = $password;
-    
-    /* Finally send the mail. */
-    $mail->send();
-    $message_sent = TRUE;
+        $mail->IsHTML(true);
+
+        /* SMTP authentication username. */
+        $mail->Username = $email;
+        
+        /* SMTP authentication password. */
+        $mail->Password = $password;
+        
+        /* Finally send the mail. */
+        $mail->send();
+        $message_sent = TRUE;
     }
-?>
 
+// try {
+   
+//    $mail->setFrom($email, 'Darth Vader');
+//    $mail->addAddress($email, 'Emperor');
+//    $mail->Subject = 'FSOCIETY';
+//    $mail->Body = 'There is a great disturbance in the Force.';
+//    $mail->isSMTP();
+//    $mail->Host = 'smtp.gmail.com';
+//    $mail->SMTPAuth = TRUE;
+// //    $mail->AuthType = 'LOGIN';
+//    $mail->SMTPSecure = 'ssl';
+//    $mail->Username = $email;
+//    $mail->Password = $password;
+//    $mail->Port = 465;
+   
+//    /* Enable SMTP debug output. */
+//    $mail->SMTPDebug = 4;
+   
+//    $mail->send();
+// }
+// catch (Exception $e)
+// {
+//    echo $e->errorMessage();
+// }
+// catch (\Exception $e)
+// {
+//    echo $e->getMessage();
+// }
+?>
 
 <!DOCTYPE html>
 <html lang="en">
