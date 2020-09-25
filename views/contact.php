@@ -62,35 +62,6 @@
         $mail->send();
         $message_sent = TRUE;
     }
-
-// try {
-   
-//    $mail->setFrom($email, 'Darth Vader');
-//    $mail->addAddress($email, 'Emperor');
-//    $mail->Subject = 'FSOCIETY';
-//    $mail->Body = 'There is a great disturbance in the Force.';
-//    $mail->isSMTP();
-//    $mail->Host = 'smtp.gmail.com';
-//    $mail->SMTPAuth = TRUE;
-// //    $mail->AuthType = 'LOGIN';
-//    $mail->SMTPSecure = 'ssl';
-//    $mail->Username = $email;
-//    $mail->Password = $password;
-//    $mail->Port = 465;
-   
-//    /* Enable SMTP debug output. */
-//    $mail->SMTPDebug = 4;
-   
-//    $mail->send();
-// }
-// catch (Exception $e)
-// {
-//    echo $e->errorMessage();
-// }
-// catch (\Exception $e)
-// {
-//    echo $e->getMessage();
-// }
 ?>
 
 <!DOCTYPE html>
